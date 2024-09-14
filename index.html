@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito che fa schifo</title>
+    <style>
+        body {
+            background-color: limegreen;
+            color: red;
+            font-family: "Comic Sans MS", sans-serif;
+            text-align: center;
+        }
+
+        nav {
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: blue;
+            font-size: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-shadow: 5px 5px 0px yellow;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 50px;
+            line-height: 1.5;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 5px dashed purple;
+        }
+
+        a {
+            color: blue;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 50px;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        video {
+            margin-top: 20px;
+            border: 5px dashed red;
+            width: 800px;
+        }
+
+        #content {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showHehePage() {
+            var hehePage = document.getElementById('hehePage');
+            hehePage.style.display = 'block';
+
+            // Fare partire i video automaticamente con l'audio
+            var rickrollVideo = document.getElementById('rickroll');
+            var altroVideo = document.getElementById('altroVideo');
+            
+            rickrollVideo.play();
+            altroVideo.play();
+        }
+    </script>
+</head>
+<body onload="showHehePage()">
+
+    <nav>
+        <a href="#" onclick="showHehePage()">Hehe Way</a>
+    </nav>
+
+    <div id="content">
+        <!-- Hehe Way Page -->
+        <div id="hehePage">
+            <h1>HEHE RICKROLLATO!</h1>
+            <video id="rickroll" autoplay loop>
+                <source src="https://rickroll.it/rickroll.mp4" type="video/mp4">
+                Il tuo browser non supporta la riproduzione del video.
+            </video>
+            <p>Hai appena guardato il Rickroll!</p>
+
+            <h2>Altro video</h2>
+            <video id="altroVideo" autoplay loop>
+                <source src="https://qu.ax/KgWL.mp4" type="video/mp4">
+                Il tuo browser non supporta la riproduzione del video.
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>
