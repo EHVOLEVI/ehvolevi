@@ -10,6 +10,8 @@
             color: red;
             font-family: "Comic Sans MS", sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         nav {
@@ -65,12 +67,23 @@
 
         #content {
             margin-top: 20px;
+            padding-bottom: 100px; /* Spazio per il footer */
+        }
+
+        footer {
+            background-color: yellow;
+            color: blue;
+            font-size: 20px;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
     <script>
-        function showHehePage() {
-            var hehePage = document.getElementById('hehePage');
-            hehePage.style.display = 'block';
+        function showPlayPage() {
+            var playPage = document.getElementById('playPage');
+            playPage.style.display = 'block';
 
             // Fare partire i video automaticamente con l'audio
             var rickrollVideo = document.getElementById('rickroll');
@@ -81,15 +94,15 @@
         }
     </script>
 </head>
-<body onload="showHehePage()">
+<body onload="showPlayPage()">
 
     <nav>
-        <a href="#" onclick="showHehePage()">Play</a>
+        <a href="#" onclick="showPlayPage()">Play</a>
     </nav>
 
     <div id="content">
         <!-- Play Page -->
-        <div id="hehePage">
+        <div id="playPage">
             <h1>HEHE RICKROLLATO!</h1>
             <video id="rickroll" autoplay loop>
                 <source src="https://rickroll.it/rickroll.mp4" type="video/mp4">
@@ -104,6 +117,10 @@
             </video>
         </div>
     </div>
+
+    <footer>
+        Made with ❤️ by Marco & Leo
+    </footer>
 
 </body>
 </html>
